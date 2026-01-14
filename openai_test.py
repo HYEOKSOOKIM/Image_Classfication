@@ -5,7 +5,7 @@ import base64
 from io import BytesIO
 import streamlit as st
 from PIL import Image
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 from openai import OpenAI
 
 # 이미지를 base64 문자열로 인코딩하는 함수
@@ -48,7 +48,7 @@ JSON format으로 키는 'building', 'sea', 'mountain'으로 하고 각각 건�
 markdown format은 포함하지 말아줘.
 """
 
-load_dotenv()
+# load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
 # client는 보통 전역 1회 생성 권장
@@ -86,4 +86,5 @@ if uploaded_file:
 
 # -6) 결과 출력하기 : st.write / st.code
         st.subheader('분류 결과')
+
         st.code(response)
